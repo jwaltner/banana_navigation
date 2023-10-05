@@ -92,7 +92,7 @@ The checkpoint which was attained by saving the model weights at episode 479 cor
 
 ### Checkpoint at 815 Episodes
 
-The checkpoint which was attained by saving the model weights at episode 815 corresponds to the model which is able to attain at least a score of 15 over a rolling window of 100 episodes.  While this model and agent solved the environment, and the bahavior is fairly smooth as seen in herethe behavior of the agent was fairly jittery as shown in [banana_15_nice_performance_480p.mov](./videos/banana_15_nice_performance_480p.mov).  This video was obtained with a random seed of the environment of `1`.  
+The checkpoint which was attained by saving the model weights at episode 815 corresponds to the model which is able to attain at least a score of 15 over a rolling window of 100 episodes.  While this model and agent solved the environment, and the bahavior is fairly smooth as seen in herethe behavior of the agent was fairly jittery as shown in [banana_15_nice_performance_480p.mov](videos/banana_15_nice_performance_480p.mov).  This video was obtained with a random seed of the environment of `1`.  
 
 It is curious, however, that when the random seed is the default random seed, that the agent gets stuck in a limit cycle between a blue banana and the wall.  In this case, the agent turns right to avoid the blue banana, but then turns toward the wall and then turns left to avoid the wall which puts the agent back facing the blue banana again.  This type of behavior likely explains the wide variation in the scores which which were attained by the model.  This behavior can be seen in [banana_15_limit_cycle_480p.mov](./videos/banana_15_limit_cycle_480p.mov).
 
