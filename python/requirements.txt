@@ -1,0 +1,15 @@
+tensorflow
+Pillow
+matplotlib
+numpy
+jupyter
+pytest
+docopt
+pyyaml
+protobuf
+grpcio
+# torch removed and installed with conda instead of pip
+#torch
+pandas
+scipy
+ipykernel
