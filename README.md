@@ -73,3 +73,5 @@ Example results from a trained agent operating in the environment:
 ## Instructions
 
 Follow the instructions in `Navigation.ipynb` to train the agent.  Note that with the model provided here which trains from the 37 states provided in the pre-packaged Unity environment, a GPU was not required.
+
+Note that a report on this project is provided in `Report.md`.
