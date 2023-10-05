@@ -84,7 +84,7 @@ Episode 2000	Average Score: 15.70	Elapsed Time: 1690.22 sec
 
 ## Agent Performance
 
-Examples of how various checkpoints of the agent performs under different scenarios are found in the [videos](./videos) directory.
+Examples of how various checkpoints of the agent performs under different scenarios are found in the [videos](./videos) directory.  The videos are also uploaded to YouTube and links to the individual videos are found below.
 
 ### Checkpoint at 479 Episodes
 
