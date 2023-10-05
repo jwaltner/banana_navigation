@@ -88,17 +88,17 @@ Examples of how various checkpoints of the agent performs under different scenar
 
 ### Checkpoint at 479 Episodes
 
-The checkpoint which was attained by saving the model weights at episode 479 corresponds to the model which is able to attain at least a score of 13 over a rolling window of 100 episodes.  While this model and agent solved the environment, the behavior of the agent was fairly jittery as shown in [banana_13_jittery_performance_480p.mov](./videos/banana_13_jittery_performance_480p.mov).
+The checkpoint which was attained by saving the model weights at episode 479 corresponds to the model which is able to attain at least a score of 13 over a rolling window of 100 episodes.  While this model and agent solved the environment, the behavior of the agent was fairly jittery as shown in [banana_13_jittery_performance_480p](https://youtu.be/xF7UtduBJIE).  The video will need to be downloaded from GitHub and can not be viewed inside GitHub.
 
 ### Checkpoint at 815 Episodes
 
-The checkpoint which was attained by saving the model weights at episode 815 corresponds to the model which is able to attain at least a score of 15 over a rolling window of 100 episodes.  While this model and agent solved the environment, and the bahavior is fairly smooth as seen in herethe behavior of the agent was fairly jittery as shown in [banana_15_nice_performance_480p.mov](videos/banana_15_nice_performance_480p.mov).  This video was obtained with a random seed of the environment of `1`.  
+The checkpoint which was attained by saving the model weights at episode 815 corresponds to the model which is able to attain at least a score of 15 over a rolling window of 100 episodes.  While this model and agent solved the environment, and the bahavior is fairly smooth as seen in herethe behavior of the agent was fairly jittery as shown in [banana_15_nice_performance_480p](https://youtu.be/M5YQOQ9G5dI).  This video was obtained with a random seed of the environment of `1`.  
 
-It is curious, however, that when the random seed is the default random seed, that the agent gets stuck in a limit cycle between a blue banana and the wall.  In this case, the agent turns right to avoid the blue banana, but then turns toward the wall and then turns left to avoid the wall which puts the agent back facing the blue banana again.  This type of behavior likely explains the wide variation in the scores which which were attained by the model.  This behavior can be seen in [banana_15_limit_cycle_480p.mov](./videos/banana_15_limit_cycle_480p.mov).
+It is curious, however, that when the random seed is the default random seed, that the agent gets stuck in a limit cycle between a blue banana and the wall.  In this case, the agent turns right to avoid the blue banana, but then turns toward the wall and then turns left to avoid the wall which puts the agent back facing the blue banana again.  This type of behavior likely explains the wide variation in the scores which which were attained by the model.  This behavior can be seen in [banana_15_limit_cycle_480p](https://youtu.be/6O8Zhzkd450).
 
 ### Checkpoint at 2000 Episodes
 
-The checkpoint which was attained by saving the model weights at episode 2000 was observed as well.  Note that this agent's performance is numerically nearly identical to the previous agent checkpoint at 815 episodes; however, the behavior is once again slightly more jittery than the previous agent as shown in [banana_final_480p.mov](./videos/banana_final_480p.mov). 
+The checkpoint which was attained by saving the model weights at episode 2000 was observed as well.  Note that this agent's performance is numerically nearly identical to the previous agent checkpoint at 815 episodes; however, the behavior is once again slightly more jittery than the previous agent as shown in [banana_final_480p](https://youtu.be/Q0VD48XuA7E). 
 
 ## Ideas for Future Work
 
