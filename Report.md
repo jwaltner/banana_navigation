@@ -11,9 +11,36 @@ This report details the algorithm used to solve the Udacity Unity Bananas enviro
 
 The learning algorthm used to solve this environment was a Deep Q-Network (dqn) with experience replay and fixed Q-targets and soft updates to the target network every 4 steps.  Updating the target network every 4 steps allows us to decouple the local network training from the target network training and in theory provides better stability in training.  While this is true in general, running the training updating both the target and local network each frame did not hurt training performance for solving this particular environment.
 
-The network itself used a deep neural net defined in [model.py](./model.py) whose hidden layers sequentially doubled then halved the number of units in a layer to allow for sufficient degrees of freedom to learn complex behaviors.  The hidden layers used a ReLU activation function and the final output layer which mapped to the four available actions did not have any additional shaping functions applied.
+## Model Architecture
 
-with experience replay, 
+The agent network itself used a fully connected  deep neural net defined in [model.py](./model.py) whose hidden layers sequentially doubled then halved the number of units in a layer to allow for sufficient degrees of freedom to learn complex behaviors.  The hidden layers used a ReLU activation function and the final output layer which mapped to the four available actions did not have any additional shaping functions applied.  The number of nodes in each layer of this network are as follows:
+
+Each fully connected network layer fc1 through fc2 uses a ReLU activation function.
+
+```
+QNetwork(
+  (fc1): Linear(in_features=37, out_features=74, bias=True)
+  (fc2): Linear(in_features=74, out_features=148, bias=True)
+  (fc3): Linear(in_features=148, out_features=148, bias=True)
+  (fc4): Linear(in_features=148, out_features=74, bias=True)
+  (fc5): Linear(in_features=74, out_features=4, bias=True)
+)
+```
+
+## Hyperparameters
+
+For training, the agent used the following hyper parameters:
+
+```
+BUFFER_SIZE = int(1e5)  # replay buffer size
+BATCH_SIZE = 64         # minibatch size
+GAMMA = 0.99            # discount factor
+TAU = 1e-3              # for soft update of target parameters
+LR = 5e-4               # learning rate 
+UPDATE_EVERY = 4        # how often to update the network
+```
+
+As noted below, during this project, I primarilly modified the `UPDATE_EVERY` parameter to see the affect on the stability and speed to train the model.  Discussion of this investigation follows.
 
 ## Training
 
